@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login and Register Page</title>
+        <link rel="stylesheet" href="../css/UserLogin.css">
+        <link rel="icon" href="../images/header_icon.png" type="ico" sizes="16x16">
+        <link rel="stylesheet" href="../css/home.css">
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        >
+        <script
+          src="https://kit.fontawesome.com/9d93f40cf0.js"
+          crossorigin="anonymous"
+        ></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.0/dist/sweetalert2.all.min.js"></script>
+    </head>
+
+    <body>
+      <!-- Navigation Bar -->
+    <!-- Navigation Bar -->
+    <header class="site-header">
+      <div class="header-container">
+          <nav class="main-nav">
+              <!--Navigation bar top logo and search bar section-->
+              <div class="top-logo-section">
+                  <div class="logo">
+                          <img src="../images/logo.png" alt="Logo" width="206" height="86" />
+                  </div>
+                  <div class="search-container">
+                      <div class="search">
+                          <input type="text" class="searchTerm" placeholder="What are you looking for?" />
+                          <button type="submit" class="searchButton">
+                              <i class="fa fa-search"></i>
+                          </button>
+                      </div>
+                  </div>
+                  <div class="user-home">
+                      <button style="font-size: 30px" type="submit" class="userButtonNav">
+                          <i class="far fa-user"></i>
+                      </button>
+                      <div class="dropdown-content">
+                          <a href="AdminLogin.html">Admin</a><br>
+                          <a href="TrafficLogin.html">Traffic</a><br>
+                          <a href="UserLogin.html">User</a><br>
+                      </div>
+                  </div>
+                </div>
+
+              <!--Navigation bar Menu section-->
+              <div class="nav-menu-section">
+                  <ul>
+                      <li>
+                          <a class="menu-items" href="../index.html">Home</a>
+                      </li>
+                      <li>
+                          <a class="menu-items" href="TrafficChallan.html">Challan</a>
+                      </li>
+                      <li>
+                          <a class="menu-items" href="UserLogin.html">Payment</a>
+                      </li>
+                      <li>
+                          <a class="menu-items" href="News.html">News</a>
+                      </li>
+                      <li>
+                          <a class="menu-items" href="About.html">About</a>
+                      </li>
+                      <li>
+                          <a class="menu-items" href="Contact.html">Contact</a>
+                      </li>
+                  </ul>
+              </div>
+          </nav>
+      </div>
+  </header>
+  <!--End of Navigation Bar-->
+
+        <div class="hero">
+            <div class="from-box">
+                <div class="button-box">
+                    <div id="btn"></div>
+                   <button type="button" class="toggle-btn" onclick="signin()">Sign In</button>
+                   <button type="button" class="toggle-btn" onclick="register()">Register</button>
+                </div>
+                <form id="signin" class="input-group" method="GET">
+                    <input type="text" class="input-field" id="username" placeholder="User Name" required>
+                    <input type="password" class="input-field" id="passw" placeholder="Password" required>
+                    <input type="checkbox" class="check-box"><span>Remember Password</span>
+                    <button type="submit" class="submit-btn" id="sub-btn">Sign In</button>
+                    
+            
+                </form>
+                <form id="register" class="input-group" method="POST">
+                    <input type="text" class="input-field" id="urname" placeholder="User Name" required>
+                    <input type="email" class="input-field" id="mail" placeholder="Email" required>
+                    <input type="tel" class="input-field" id="number" placeholder="Phone Number" required>
+                    <input type="text" class="input-field" id="add" placeholder="Address" required>
+                    <input type="password" class="input-field" id="pass" placeholder="Password" required>
+                    <input type="checkbox" class="check-box"><span>I agree to the terms and Condition</span>
+                    <button type="submit" class="submit-btn">Register</button>
+                   
+                </form>
+            </div>
+        </div>
+
+        <script>
+            var x = document.getElementById("signin");
+            var y = document.getElementById("register");
+            var z = document.getElementById("btn");
+
+            function register(){
+                x.style.left = "-400px";
+                y.style.left = "50px";
+                z.style.left = "110px";
+            }
+
+            function signin(){
+                x.style.left = "50px";
+                y.style.left = "450px";
+                z.style.left = "0px";
+            }
+
+        </script>
+
+ <!--Footer Section-->
+  <footer>
+    <div class="footer-container">
+      <h5 class="footer-heading">
+        Get to Know Us More
+      </h5>
+      <div class="row-social-icons">
+        <ul>
+          <li title=Facebook>
+            <a href="#" target=_blank title=Facebook rel="noopener noreferrer">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li title=Dribbble>
+            <a href="#" target=_blank title=Dribbble rel="noopener noreferrer">
+              <i class="fa fa-dribbble"></i>
+            </a>
+          </li>
+          <li title=GitHub>
+            <a href="#" target=_blank title=Github rel="noopener noreferrer">
+              <i class="fa fa-github"></i>
+            </a>
+          </li>
+          <li title=Behance>
+            <a href="#" target=_blank title=Behance rel="noopener noreferrer">
+              <i class="fa fa-behance"></i>
+            </a>
+          </li>
+          <li title=Twitter>
+            <a href="#" target=_blank title=Twitter rel="noopener noreferrer">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-menu-container">
+        <div class="footer-menu">
+          <h1>Traffic Police</h1>
+          <h2>Contact Us</h2>
+          <h2>About Us</h2>
+          <h2>News</h2>
+          <h2>Privacy Policy</h2>
+        </div>
+        <div class="footer-menu">
+          <h1>Information</h1>
+          <h2>Advice</h2>
+          <h2>Crime Prevention</h2>
+          <h2>Challan</h2>
+          <h2>Payment</h2>
+        </div>
+        <div class="footer-menu">
+          <h1>Partners</h1>
+          <h2>Police Sathi</h2>
+          <h2>Nepal Government</h2>
+          <h2>Herald Kathmandu</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row-copyright ">
+      <p>Copyright © 2021 E-Challan System - All right reserved</p>
+    </div>
+  </footer>
+  <!--End of Footer Section-->
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="../js/userregister.js"></script>
+  <script src="../js/userlogin.js"></script>
+ 
+
+    </body>
+</html>

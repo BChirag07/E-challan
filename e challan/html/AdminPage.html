@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../images/header_icon.png" type="ico" sizes="16x16">
+  <link rel="stylesheet" type="text/css" href="../css/home.css" />
+  <link rel="stylesheet" type="text/css" href="../css/AdminPage.css"
+  <title>Admin Page</title>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.0/dist/sweetalert2.all.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script src="https://kit.fontawesome.com/9d93f40cf0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <header class="site-header">
+    <div class="header-container">
+      <nav class="main-nav">
+        <!--Navigation bar top logo and search bar section-->
+        <div class="top-logo-section">
+          <div class="logo">
+            <a href="../index.html">
+              <img src="../images/logo.png" alt="Logo" width="206" height="86" />
+            </a>
+          </div>
+          <div class="search-container">
+            <div class="search">
+              <input type="text" class="searchTerm" placeholder="What are you looking for?" />
+              <button type="button" class="searchButton">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+          </div>
+          <div class="user-home">
+            <button style="font-size: 30px" type="submit" class="userButtonNav">
+              <i class="far fa-user"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="../html/AdminLogin.html">Admin</a><br>
+              <a href="../html/TrafficLogin.html">Traffic</a><br>
+              <a href="../html/UserLogin.html">User</a><br>
+            </div>
+          </div>
+        </div>
+
+        <!--Navigation bar Menu section-->
+        <div class="nav-menu-section">
+          <ul>
+            <li>
+              <a class="menu-items" href="#">Home</a>
+            </li>
+            <li>
+              <a class="menu-items" href="../html/TrafficLogin.html">Challan</a>
+            </li>
+            <li>
+              <a class="menu-items" href="../html/UserLogin.html">Payment</a>
+            </li>
+            <li>
+              <a class="menu-items" href="../html/News.html">News</a>
+            </li>
+            <li>
+              <a class="menu-items" href="../html/About.html">About</a>
+            </li>
+            <li>
+              <a class="menu-items" href="../html/Contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!--End of Navigation Bar-->
+   
+  <!--Start of Admin Dashboard-->
+  <table>
+    <tr>
+      <td class="main-form">
+        <form id="challan" class="challan-form" onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off" method="POST">
+          <div class="challan-detail">
+            <h2>Challan Details</h2>
+            <div>
+              <label>Full Name</label>
+              <input class="input-admin" id="fullName" type="text" placeholder="Enter Full Name" required>
+            </div>
+            <div>
+              <label>Address</label>
+              <input class="input-admin" id="address" type="text" placeholder="Enter Address" required>
+            </div>
+            <div>
+              <label>License Number</label>
+              <input class="input-admin" id="licenseno" type="text" placeholder="Enter License Number" required>
+            </div>
+            <div>
+              <label>Vehicle Category</label>
+              <select id="vehicle" name="vehicle">
+                <option value="A">Category A</option>
+                <option value="B">Category B</option>
+                <option value="C">Category C</option>
+                <option value="D">Category D</option>
+              </select>
+            </div>
+            <div>
+              <label>Vehicle Number</label>
+              <input class="input-admin" id="vehicleno" type="text" placeholder="Enter vehicle number" required>
+            </div>
+            <div>
+              <label>Created By</label>
+              <input class="input-admin" id="creater" type="text" placeholder="Challan creater name" required>
+            </div>
+            <div>
+              <label> Challan Date</label>
+              <input style="width: 200px;" id="date" type="date" required>
+            </div>
+  
+            <div>
+              <label>Guilty For</label>
+              <input class="input-admin" id="problem" type="text" placeholder="Enter challan reason" required>
+            </div>
+            <div>
+              <label>Fine Amount</label>
+              <input class="input-admin" id="amount" type="number" placeholder="Enter fine amount" required>
+            </div>
+          </div>
+          <div class="buttonss">
+            <button class="input-admin" id="submitChallan" type="submit">Submit</button>
+          </div>
+        </form>
+      </td>
+      <td class="details-table">
+        <table class="list" id="challanList">
+          <thead>
+            <tr>
+              <th>Created Date</th>
+              <th>Name</th>
+              <th>License No.</th>
+              <th>Created By</th>
+              <th>Category</th>
+              <th>Address</th>
+              <th>Vehicle No.</th>
+              <th>Reason</th>
+              <th>Fine</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+  
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </table>
+  <!--End of Admin Dashboard-->
+  
+  <!--Footer Section-->
+  <footer>
+    <div class="footer-container">
+      <h5 class="footer-heading">
+        Get to Know Us More
+      </h5>
+      <div class="row-social-icons">
+        <ul>
+          <li title=Facebook>
+            <a href="#" target=_blank title=Facebook rel="noopener noreferrer">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li title=Dribbble>
+            <a href="#" target=_blank title=Dribbble rel="noopener noreferrer">
+              <i class="fa fa-dribbble"></i>
+            </a>
+          </li>
+          <li title=GitHub>
+            <a href="#" target=_blank title=Github rel="noopener noreferrer">
+              <i class="fa fa-github"></i>
+            </a>
+          </li>
+          <li title=Behance>
+            <a href="#" target=_blank title=Behance rel="noopener noreferrer">
+              <i class="fa fa-behance"></i>
+            </a>
+          </li>
+          <li title=Twitter>
+            <a href="#" target=_blank title=Twitter rel="noopener noreferrer">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+  
+      <div class="footer-menu-container">
+        <div class="footer-menu">
+          <h1>Traffic Police</h1>
+          <h2>Contact Us</h2>
+          <h2>About Us</h2>
+          <h2>News</h2>
+          <h2>Privacy Policy</h2>
+        </div>
+        <div class="footer-menu">
+          <h1>Information</h1>
+          <h2>Advice</h2>
+          <h2>Crime Prevention</h2>
+          <h2>Challan</h2>
+          <h2>Payment</h2>
+        </div>
+        <div class="footer-menu">
+          <h1>Partners</h1>
+          <h2>Police Sathi</h2>
+          <h2>Nepal Government</h2>
+          <h2>Herald Kathmandu</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row-copyright ">
+      <p>Copyright © 2021 E-Challan System - All right reserved</p>
+    </div>
+  </footer>
+  <!--End of Footer Section-->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="../js/AdminPage.js"></script>
+</body>
+
+</html>
